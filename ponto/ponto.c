@@ -28,7 +28,6 @@ void ponto_apagar(PONTO *p) {
  *Função para modificar as coordenadas de um ponto
  */
 bool ponto_set(PONTO *p, float x, float y) {
-    if(x < 0 || y < 0) return false;
 
     p->x = x;//seta cordenadas
     p->y = y;
@@ -64,5 +63,5 @@ float ponto_get_y(PONTO *p) {
  *Função que imprime um ponto
  */
 void ponto_print(PONTO *p) {
-    printf("ponto: %f, %f", ponto_get_x(p), ponto_get_y(p));
+    printf("\n ponto: %f, %f \n", ponto_get_x(p), ponto_get_y(p));
 };

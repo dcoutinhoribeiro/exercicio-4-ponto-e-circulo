@@ -1,0 +1,6 @@
+//Daniel Coutinho Ribeiro - 10788784
+
+Ambos os TADs (ciruculo e ponto) e o arquivo main.c foram alterados de maneira que os metódos "ponto_apagar" e "circulo_apagar" fossem implementados de maneira mais semelhante a que foi apresentada na aula (utilizando um ponteiro como parametro da função e não um ponteiro para um ponteiro)
+
+Além disso decidi implementar a função distância no TAD ponto, uma solução alternativa (mais elegante) seria definir um TAD "segmento de reta" atráves de dois pontos, e nesse TAD implementar a funcão comprimento para o segmento de reta.
+

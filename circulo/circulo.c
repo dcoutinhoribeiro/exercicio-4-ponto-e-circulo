@@ -19,7 +19,7 @@ CIRCULO *circulo_criar(PONTO *p, float raio) {
     newc =  (CIRCULO *) malloc(sizeof(CIRCULO));
     newc->centro = p;
 
-    if(!circulo_set_raio(newc, raio)) return NULL;
+    if(!circulo_set_raio(newc, raio)) exit(2);
 
     return newc;
 };
@@ -36,7 +36,7 @@ bool circulo_set_ponto(CIRCULO *c, PONTO *p) {
  *Função para modificar o raio de um CIRCULO
  */
 bool circulo_set_raio(CIRCULO *c, float raio) {
-    if(raio <= 0) return false;
+    if(raio < 0) return false;
     c->raio = raio;
 
     return true;
@@ -64,6 +64,7 @@ float circulo_get_raio(CIRCULO *c) {
  */
 void circulo_apagar(CIRCULO *circulo) {
     if(circulo == NULL) return;
-        free(circulo);
+    
+    free(circulo);
 };
 
