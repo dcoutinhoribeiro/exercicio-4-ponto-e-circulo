@@ -6,7 +6,9 @@
 #include "ponto.h"
 
 //avisa o programa que existe um novo tipo de dados que é o CIRCULO
-typedef struct circulo_ CIRCULO;
+typedef struct circulo_ CIRCULO {
+    
+};
 
 /*
  *Função para inicializar o tipo de dados CIRCULO

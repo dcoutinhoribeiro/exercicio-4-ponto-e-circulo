@@ -4,19 +4,32 @@
 #include <stdbool.h>
 
 //avisa o programa que existe um novo tipo de dados que é o PONTO
-typedef struct ponto_ PONTO;
+typedef struct ponto_ {
+    float x;
+    float y;
+} PONTO;
 
 /*
  *Função para inicializar o tipo de dados PONTO
- * @retun   um ponteiro do tipo CIRCULO devidamente inicializado
+ * @retun  um ponteiro do tipo PONTO devidamente inicializado
  */
-PONTO *ponto_criar();
+PONTO *ponto_criar(float x, float y) {
+    PONTO *newp;
+    
+    newp =  (PONTO *)malloc(sizeof(PONTO)); //alocando memoria
+    newp->x = x;
+    newp->y = y;
+    
+    return newp;
+};
 
 /*
  * Função que apaga o PONTO, após isso ele deve ser inicializado novamente
  * @param **p ponteiro de PONTO que deseja ser apagado
  */
-void ponto_apagar(PONTO **p);
+void ponto_apagar(PONTO **p) {
+    
+};
 
 /*
  *Função para modificar as coordenadas de um ponto
@@ -25,7 +38,13 @@ void ponto_apagar(PONTO **p);
  * @param y     coordenada y
  * @return      um booleano informando se a operação deu certo
  */
-bool ponto_set(PONTO *p, float x, float y);
+bool ponto_set(PONTO *p, float x, float y) {
+    p->x = x;
+    p->y = y;
+
+    if(p->x == x && p->y == y) return true;
+    else return false; // checks values changed
+};
 
 /*
  *Função que retorna a coordenada x de um ponto
