@@ -5,8 +5,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "circulo.h"
-#include "ponto.h"
+#include "circulo/circulo.h"
+#include "ponto/ponto.h"
 
 /*
  * 
@@ -52,9 +52,9 @@ int main(int argc, char** argv) {
 
 
     //sempre lembrar de desalocar a memoria que foi alocada
-    ponto_apagar(&centro_circulo);
-    ponto_apagar(&ponto_aux);
-    circulo_apagar(&c);
+    ponto_apagar(centro_circulo);
+    ponto_apagar(ponto_aux);
+    circulo_apagar(c);
 
 
     return (EXIT_SUCCESS);
